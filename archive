@@ -8,3 +8,15 @@ def target_predict(model):
     prediction = model.predict(X_test)
     acc = accuracy_score(np.array(y_test), prediction)
     return acc
+
+model1 = RandomForestClassifier(max_depth = 10, n_estimators = 100, min_samples_split = 25)
+acc1 = target_predict(model1)
+print(acc1)
+
+model2 = LogisticRegression(solver='liblinear')
+acc2 = target_predict(model2)
+print(acc2)
+
+model3 = DecisionTreeClassifier()
+acc3 = target_predict(model3)
+print(acc3)
