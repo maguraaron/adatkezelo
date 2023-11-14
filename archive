@@ -1,0 +1,5 @@
+def target_predict(model):
+    model.fit(X_train, y_train)
+    prediction = model.predict(X_test)
+    acc = accuracy_score(np.array(y_test), prediction)
+    return acc
